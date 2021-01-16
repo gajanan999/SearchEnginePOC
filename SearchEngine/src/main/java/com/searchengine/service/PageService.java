@@ -24,10 +24,6 @@ public class PageService {
 				pageList.stream()
 			              .map(PageDetails::getAddress)
 			              .collect(Collectors.toList());
-		
-//		List<String> internalIpAddresses = Stream.of(keyword) // can add more addresses
-//		        .filter(ip -> addresses.stream().anyMatch(ip::startsWith))
-//		        .collect(Collectors.toList());
 		List<String> finalList = new ArrayList<String>();
 		List<String> firstList = addresses.stream()
         .filter(str -> str.startsWith(keyword))
